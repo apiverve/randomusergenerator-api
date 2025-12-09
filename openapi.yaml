@@ -1,0 +1,79 @@
+openapi: 3.0.4
+info:
+  title: Random User Generator
+  description: Random User Generator is a simple tool for generating random user data. It returns the user's name, email, and more.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/randomusergenerator:
+    get:
+      summary: Generate User
+      description: Random User Generator is a simple tool for generating random user data. It returns the user's name, email, and more.
+      operationId: randomusergenerator
+      parameters:
+      - name: count
+        default: '1'
+        in: query
+        schema:
+          type: integer
+        required: false
+        description: The number of users to generate
+        example: '1'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+                  code:
+                    type: number
+                    description: code
+              example:
+                status: ok
+                error: 
+                data:
+                - id: 04e47b46-c078-4d51-a7e9-17708ebea53e
+                  name: Yvette Greenholt
+                  gender: Female
+                  username: Julien.Kutch
+                  email: Jude_Kuhic@yahoo.com
+                  password: M90Tqd9_5_9tbuE
+                  registered: 2024-12-06T20:36:01.4850000Z
+                  phone: 832.718.9991 x55356
+                  cell: (344) 512-8916 x36142
+                  birthdate: 1958-06-28T06:23:25.8290000Z
+                code: 200
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
