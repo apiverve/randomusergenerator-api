@@ -12,7 +12,6 @@ namespace APIVerve.API.RandomUserGenerator
     {
         /// <summary>
         /// The number of users to generate
-        /// Example: 1
         /// </summary>
         [JsonProperty("count")]
         public string Count { get; set; }
