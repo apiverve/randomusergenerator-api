@@ -228,8 +228,9 @@ from apiverve_randomusergenerator.apiClient import RandomusergeneratorAPIClient
 
 api = RandomusergeneratorAPIClient("[YOUR_API_KEY]")
 
+query = { "count": 1 }
+
 try:
-    query = { "count": 1 }
     result = api.execute(query)
     print(result)
 finally:
