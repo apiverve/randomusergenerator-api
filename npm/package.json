@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/randomusergenerator",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Random User Generator is a simple tool for generating random user data. It returns the user's name, email, and more.",
   "main": "index.js",
   "types": "index.d.ts",
