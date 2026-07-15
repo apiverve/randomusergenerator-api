@@ -7,7 +7,7 @@ Random User Generator is a simple tool for generating random user data. It retur
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 [![npm version](https://img.shields.io/npm/v/@apiverve/randomusergenerator.svg)](https://www.npmjs.com/package/@apiverve/randomusergenerator)
 
-This is a Javascript Wrapper for the [Random User Generator API](https://apiverve.com/marketplace/randomusergenerator?utm_source=npm&utm_medium=readme)
+This is a Javascript Wrapper for the [Random User Generator API](https://randomusergenerator.apiverve.com?utm_source=npm&utm_medium=readme)
 
 ---
 
@@ -60,7 +60,8 @@ Using the API is simple. All you have to do is make a request. The API will retu
 
 ```javascript
 var query = {
-  count: 1
+  count: 1,
+  includeAvatar: false
 };
 
 api.execute(query, function (error, data) {
@@ -80,7 +81,8 @@ You can also use promises to make requests. The API returns a promise that you c
 
 ```javascript
 var query = {
-  count: 1
+  count: 1,
+  includeAvatar: false
 };
 
 api.execute(query)
@@ -101,7 +103,8 @@ You can also use async/await to make requests. The API returns a promise that yo
 ```javascript
 async function makeRequest() {
     var query = {
-  count: 1
+  count: 1,
+  includeAvatar: false
 };
 
     try {
@@ -123,19 +126,19 @@ async function makeRequest() {
   "error": null,
   "data": [
     {
-      "id": "04e47b46-c078-4d51-a7e9-17708ebea53e",
-      "name": "Yvette Greenholt",
-      "gender": "Female",
-      "username": "Julien.Kutch",
-      "email": "Jude_Kuhic@yahoo.com",
-      "password": "M90Tqd9_5_9tbuE",
-      "registered": "2024-12-06T20:36:01.485Z",
-      "phone": "832.718.9991 x55356",
-      "cell": "(344) 512-8916 x36142",
-      "birthdate": "1958-06-28T06:23:25.829Z"
+      "id": "967e4d46-963e-4108-a0c5-ded8f630dcc8",
+      "name": "Jennifer Hoppe V",
+      "gender": "Male",
+      "username": "Olen_Kihn88",
+      "email": "Juwan5@gmail.com",
+      "password": "f0VIWRnbXFvW9Tf",
+      "registered": "2025-06-29T22:00:36.084Z",
+      "phone": "1-716-677-4155",
+      "cell": "1-353-721-7455 x2081",
+      "birthdate": "1972-01-24T19:55:15.208Z",
+      "avatar": "https://storage.googleapis.com/apiverve/APIResources/faces/Male/40-50/87654321.jpg?X-Goog-Signature=..."
     }
-  ],
-  "code": 200
+  ]
 }
 ```
 
