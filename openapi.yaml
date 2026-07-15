@@ -29,6 +29,13 @@ paths:
           required: false
           description: The number of users to generate
           example: 1
+        - name: includeAvatar
+          in: query
+          schema:
+            type: boolean
+          required: false
+          description: Include an AI-generated face avatar matching user's gender and age
+          example: true
       responses:
         '200':
           description: Successful Response
@@ -60,6 +67,8 @@ paths:
                     phone: 1-716-677-4155
                     cell: 1-353-721-7455 x2081
                     birthdate: '1972-01-24T19:55:15.208Z'
+                    avatar: >-
+                      https://storage.googleapis.com/apiverve/APIResources/faces/Male/40-50/87654321.jpg?X-Goog-Signature=...
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
