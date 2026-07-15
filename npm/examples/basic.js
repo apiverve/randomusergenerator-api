@@ -15,7 +15,8 @@ const api = new randomusergeneratorAPI({
 
 // Example query
 var query = {
-  count: 1
+  count: 1,
+  includeAvatar: false
 };
 
 // Make the API request using callback
