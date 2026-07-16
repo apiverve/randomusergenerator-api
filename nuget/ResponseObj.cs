@@ -25,12 +25,15 @@ namespace APIVerve.API.RandomUserGenerator
 
         [JsonProperty("data")]
         public Datum[] Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Datum
     {
         [JsonProperty("id")]
-        public Guid Id { get; set; }
+        public Guid? Id { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -48,7 +51,7 @@ namespace APIVerve.API.RandomUserGenerator
         public string Password { get; set; }
 
         [JsonProperty("registered")]
-        public DateTimeOffset Registered { get; set; }
+        public DateTimeOffset? Registered { get; set; }
 
         [JsonProperty("phone")]
         public string Phone { get; set; }
@@ -57,6 +60,21 @@ namespace APIVerve.API.RandomUserGenerator
         public string Cell { get; set; }
 
         [JsonProperty("birthdate")]
-        public DateTimeOffset Birthdate { get; set; }
+        public DateTimeOffset? Birthdate { get; set; }
+
+        [JsonProperty("avatar")]
+        public Uri Avatar { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
