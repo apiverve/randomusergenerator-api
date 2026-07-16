@@ -14,6 +14,12 @@ namespace APIVerve.API.RandomUserGenerator
         /// The number of users to generate
         /// </summary>
         [JsonProperty("count")]
-        public string Count { get; set; }
+        public int? Count { get; set; }
+
+        /// <summary>
+        /// Include an AI-generated face avatar matching user's gender and age
+        /// </summary>
+        [JsonProperty("includeAvatar")]
+        public bool? IncludeAvatar { get; set; }
     }
 }
