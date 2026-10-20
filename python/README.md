@@ -1,13 +1,12 @@
 Random User Generator API
 ============
 
-Random User Generator is a simple tool for generating random user data. It returns the user's name, email, and more.
+Random User Generator produces realistic mock user profiles complete with full names, email addresses, usernames, birth dates, and phone numbers. Paid plans add batch generation, random passwords, and matching AI avatars.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Random User Generator API](https://apiverve.com/marketplace/randomusergenerator?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-randomusergenerator.svg)](https://pypi.org/project/apiverve-randomusergenerator/)
+
+This is a Python wrapper for the [Random User Generator API](https://apiverve.com/marketplace/randomusergenerator?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-randomusergenerator
 
 ## Configuration
 
-Before using the randomusergenerator API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Random User Generator API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -44,7 +43,10 @@ from apiverve_randomusergenerator.apiClient import RandomusergeneratorAPIClient
 # Initialize the client with your APIVerve API key
 api = RandomusergeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "count": 1 }
+query = {
+    "count": 1,
+    "includeAvatar": true
+}
 
 try:
     # Make the API call
@@ -60,7 +62,7 @@ except Exception as e:
 
 ## Usage
 
-The Random User Generator API documentation is found here: [https://docs.apiverve.com/ref/randomusergenerator](https://docs.apiverve.com/ref/randomusergenerator?utm_source=pypi&utm_medium=readme).
+The Random User Generator API documentation is found here: [https://docs.apiverve.com/ref/randomusergenerator](https://docs.apiverve.com/ref/randomusergenerator?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -82,7 +84,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "count": 1 }
+query = {
+    "count": 1,
+    "includeAvatar": true
+}
 ```
 
 ###### Simple Request
@@ -103,19 +108,19 @@ print(result)
   "error": null,
   "data": [
     {
-      "id": "04e47b46-c078-4d51-a7e9-17708ebea53e",
-      "name": "Yvette Greenholt",
-      "gender": "Female",
-      "username": "Julien.Kutch",
-      "email": "Jude_Kuhic@yahoo.com",
-      "password": "M90Tqd9_5_9tbuE",
-      "registered": "2024-12-06T20:36:01.485Z",
-      "phone": "832.718.9991 x55356",
-      "cell": "(344) 512-8916 x36142",
-      "birthdate": "1958-06-28T06:23:25.829Z"
+      "id": "967e4d46-963e-4108-a0c5-ded8f630dcc8",
+      "name": "Jennifer Hoppe V",
+      "gender": "Male",
+      "username": "Olen_Kihn88",
+      "email": "Juwan5@gmail.com",
+      "password": "f0VIWRnbXFvW9Tf",
+      "registered": "2025-06-29T22:00:36.084Z",
+      "phone": "1-716-677-4155",
+      "cell": "1-353-721-7455 x2081",
+      "birthdate": "1972-01-24T19:55:15.208Z",
+      "avatar": "https://storage.googleapis.com/apiverve/APIResources/faces/Male/40-50/87654321.jpg?X-Goog-Signature=..."
     }
-  ],
-  "code": 200
+  ]
 }
 ```
 
@@ -132,7 +137,10 @@ from apiverve_randomusergenerator.apiClient import RandomusergeneratorAPIClient,
 
 api = RandomusergeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "count": 1 }
+query = {
+    "count": 1,
+    "includeAvatar": true
+}
 
 try:
     result = api.execute(query)
@@ -153,7 +161,10 @@ from apiverve_randomusergenerator.apiClient import RandomusergeneratorAPIClient,
 
 api = RandomusergeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "count": 1 }
+query = {
+    "count": 1,
+    "includeAvatar": true
+}
 
 try:
     result = api.execute(query)
@@ -187,7 +198,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_randomusergenerator.apiClient import RandomusergeneratorAPIClient, RandomusergeneratorAPIClientError
 
-query = { "count": 1 }
+query = {
+    "count": 1,
+    "includeAvatar": true
+}
 
 # Using context manager ensures proper cleanup
 with RandomusergeneratorAPIClient("[YOUR_API_KEY]") as api:
@@ -213,7 +227,10 @@ from apiverve_randomusergenerator.apiClient import RandomusergeneratorAPIClient
 # Enable debug mode
 api = RandomusergeneratorAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "count": 1 }
+query = {
+    "count": 1,
+    "includeAvatar": true
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -228,7 +245,10 @@ from apiverve_randomusergenerator.apiClient import RandomusergeneratorAPIClient
 
 api = RandomusergeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "count": 1 }
+query = {
+    "count": 1,
+    "includeAvatar": true
+}
 
 try:
     result = api.execute(query)
@@ -242,7 +262,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -253,12 +273,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
