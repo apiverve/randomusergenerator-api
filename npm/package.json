@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/randomusergenerator",
-  "version": "1.2.0",
-  "description": "Random User Generator is a simple tool for generating random user data. It returns the user's name, email, and more.",
+  "version": "1.2.2",
+  "description": "Random User Generator produces realistic mock user profiles complete with full names, email addresses, usernames, birth dates, and phone numbers. Paid plans add batch generation, random passwords, and matching AI avatars.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "random user generator", "random user data", "random user generator api", "random user data api", "random user generator tool"
+    "random user generator api", "random user api", "random user generator", "random name api", "random name generator api"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/randomusergenerator-api/issues"
   },
-  "homepage": "https://randomusergenerator.apiverve.com?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/randomusergenerator?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
