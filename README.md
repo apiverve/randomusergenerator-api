@@ -1,13 +1,13 @@
-# [Random User Generator API](https://randomusergenerator.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Random User Generator API](https://apiverve.com/marketplace/randomusergenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Random User Generator is a simple tool for generating random user data. It returns the user&#x27;s name, email, and more.
+Random User Generator produces realistic mock user profiles complete with full names, email addresses, usernames, birth dates, and phone numbers. Paid plans add batch generation, random passwords, and matching AI avatars.
 
 The Random User Generator API provides a simple, reliable way to integrate random user generator functionality into your applications. Built for developers who need production-ready random user generator capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://randomusergenerator.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/randomusergenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://randomusergenerator.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/randomusergenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -157,7 +157,7 @@ go get github.com/apiverve/randomusergenerator-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Random User Generator API](https://randomusergenerator.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Random User Generator API](https://apiverve.com/marketplace/randomusergenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/randomusergenerator](https://docs.apiverve.com/ref/randomusergenerator)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -187,11 +187,40 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Random User Generator API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": [
+    {
+      "id": "967e4d46-963e-4108-a0c5-ded8f630dcc8",
+      "name": "Jennifer Hoppe V",
+      "gender": "Male",
+      "username": "Olen_Kihn88",
+      "email": "Juwan5@gmail.com",
+      "password": "f0VIWRnbXFvW9Tf",
+      "registered": "2025-06-29T22:00:36.084Z",
+      "phone": "1-716-677-4155",
+      "cell": "1-353-721-7455 x2081",
+      "birthdate": "1972-01-24T19:55:15.208Z",
+      "avatar": "https://storage.googleapis.com/apiverve/APIResources/faces/Male/40-50/87654321.jpg?X-Goog-Signature=..."
+    }
+  ]
 }
 ```
 
@@ -199,7 +228,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Random User Generator API](https://randomusergenerator.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Random User Generator API](https://apiverve.com/marketplace/randomusergenerator?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

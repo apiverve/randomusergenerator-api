@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Random User Generator
   description: >-
-    Random User Generator is a simple tool for generating random user data. It
-    returns the user's name, email, and more.
+    Random User Generator produces realistic mock user profiles complete with
+    full names, email addresses, usernames, birth dates, and phone numbers. Paid
+    plans add batch generation, random passwords, and matching AI avatars.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/randomusergenerator:
     get:
-      summary: Generate User
+      summary: Random User Generator
       description: Generate random user data
       operationId: randomusergenerator
       parameters:
@@ -67,8 +68,7 @@ paths:
                     phone: 1-716-677-4155
                     cell: 1-353-721-7455 x2081
                     birthdate: '1972-01-24T19:55:15.208Z'
-                    avatar: >-
-                      https://storage.googleapis.com/apiverve/APIResources/faces/Male/40-50/87654321.jpg?X-Goog-Signature=...
+                    avatar: https://storage.googleapis.com/apiverve/APIResources/faces/Male/40-50/87654321.jpg?X-Goog-Signature=...
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
