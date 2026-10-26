@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/randomusergenerator",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Random User Generator produces realistic mock user profiles complete with full names, email addresses, usernames, birth dates, and phone numbers. Paid plans add batch generation, random passwords, and matching AI avatars.",
   "main": "index.js",
   "types": "index.d.ts",
