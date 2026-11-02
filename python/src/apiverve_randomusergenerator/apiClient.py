@@ -25,7 +25,10 @@ class RandomusergeneratorAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
         "count": {"type": "integer", "required": False, "min": 1, "max": 100, "default": 1},
-        "includeAvatar": {"type": "boolean", "required": False, "default": False}
+        "includeAvatar": {"type": "boolean", "required": False, "default": False},
+        "gender": {"type": "string", "required": False},
+        "nationality": {"type": "string", "required": False},
+        "seed": {"type": "string", "required": False}
     }
 
     # Format validation patterns
