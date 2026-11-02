@@ -15,7 +15,7 @@ use APIVerve\Randomusergenerator\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['count' => 1, 'includeAvatar' => true]);
+ * $response = $client->execute(['count' => 1, 'includeAvatar' => true, 'gender' => '', 'nationality' => '', 'seed' => '']);
  * print_r($response);
  * ```
  *
@@ -35,7 +35,10 @@ class Client
      */
     private const VALIDATION_RULES = [
         'count' => ['type' => 'integer', 'required' => false, 'min' => 1, 'max' => 100],
-        'includeAvatar' => ['type' => 'boolean', 'required' => false]
+        'includeAvatar' => ['type' => 'boolean', 'required' => false],
+        'gender' => ['type' => 'string', 'required' => false],
+        'nationality' => ['type' => 'string', 'required' => false],
+        'seed' => ['type' => 'string', 'required' => false]
     ];
 
     /**
