@@ -4,6 +4,6 @@ require_relative "apiverve_randomusergenerator/client"
 
 module APIVerve
   module Randomusergenerator
-    VERSION = "1.2.2"
+    VERSION = "1.2.4"
   end
 end

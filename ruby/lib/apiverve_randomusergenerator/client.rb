@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Randomusergenerator::Client.new(api_key: "your_api_key")
-    #   response = client.execute({ count: 1, includeAvatar: true })
+    #   response = client.execute({ count: 1, includeAvatar: true, gender: "", nationality: "", seed: "" })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/randomusergenerator?utm_source=ruby&utm_medium=referral&utm_content=readme
@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = { 'count' => { type: 'integer', required: false, min: 1, max: 100 }, 'includeAvatar' => { type: 'boolean', required: false } }
+      VALIDATION_RULES = { 'count' => { type: 'integer', required: false, min: 1, max: 100 }, 'includeAvatar' => { type: 'boolean', required: false }, 'gender' => { type: 'string', required: false }, 'nationality' => { type: 'string', required: false }, 'seed' => { type: 'string', required: false } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {
