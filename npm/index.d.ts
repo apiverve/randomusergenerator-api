@@ -25,17 +25,40 @@ declare module '@apiverve/randomusergenerator' {
 
 
   interface RandomUserGeneratorData {
-      id:         null | string;
-      name:       null | string;
-      gender:     null | string;
-      username:   null | string;
-      email:      null | string;
-      password:   null | string;
-      registered: Date | null;
-      phone:      null | string;
-      cell:       null | string;
-      birthdate:  Date | null;
-      avatar:     null | string;
+      id:          null | string;
+      name:        null | string;
+      gender:      null | string;
+      username:    null | string;
+      email:       null | string;
+      password:    null | string;
+      registered:  Date | null;
+      phone:       null | string;
+      cell:        null | string;
+      birthdate:   Date | null;
+      age:         number | null;
+      nationality: null | string;
+      location:    Location;
+      login:       Login;
+      avatar:      null | string;
+  }
+  
+  interface Location {
+      street:      null | string;
+      city:        null | string;
+      state:       null | string;
+      postcode:    null | string;
+      country:     null | string;
+      countryCode: null | string;
+      latitude:    number | null;
+      longitude:   number | null;
+      timezone:    null | string;
+  }
+  
+  interface Login {
+      salt:   null | string;
+      md5:    null | string;
+      sha1:   null | string;
+      sha256: null | string;
   }
 
   export default class randomusergeneratorWrapper {
