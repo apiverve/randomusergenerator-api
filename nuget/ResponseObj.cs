@@ -62,8 +62,65 @@ namespace APIVerve.API.RandomUserGenerator
         [JsonProperty("birthdate")]
         public DateTimeOffset? Birthdate { get; set; }
 
+        [JsonProperty("age")]
+        public long? Age { get; set; }
+
+        [JsonProperty("nationality")]
+        public string Nationality { get; set; }
+
+        [JsonProperty("location")]
+        public Location Location { get; set; }
+
+        [JsonProperty("login")]
+        public Login Login { get; set; }
+
         [JsonProperty("avatar")]
         public Uri Avatar { get; set; }
+    }
+
+    public partial class Location
+    {
+        [JsonProperty("street")]
+        public string Street { get; set; }
+
+        [JsonProperty("city")]
+        public string City { get; set; }
+
+        [JsonProperty("state")]
+        public string State { get; set; }
+
+        [JsonProperty("postcode")]
+        public string Postcode { get; set; }
+
+        [JsonProperty("country")]
+        public string Country { get; set; }
+
+        [JsonProperty("countryCode")]
+        public string CountryCode { get; set; }
+
+        [JsonProperty("latitude")]
+        public double? Latitude { get; set; }
+
+        [JsonProperty("longitude")]
+        public double? Longitude { get; set; }
+
+        [JsonProperty("timezone")]
+        public string Timezone { get; set; }
+    }
+
+    public partial class Login
+    {
+        [JsonProperty("salt")]
+        public string Salt { get; set; }
+
+        [JsonProperty("md5")]
+        public string Md5 { get; set; }
+
+        [JsonProperty("sha1")]
+        public string Sha1 { get; set; }
+
+        [JsonProperty("sha256")]
+        public string Sha256 { get; set; }
     }
 
     public partial class Premium

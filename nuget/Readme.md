@@ -61,7 +61,10 @@ class Program
 
         var queryOptions = new RandomUserGeneratorQueryOptions {
             Count = 1,
-            IncludeAvatar = true
+            IncludeAvatar = true,
+            Gender = "",
+            Nationality = "",
+            Seed = ""
         };
 
         // Make the API call
@@ -126,7 +129,10 @@ public class Example
 
         var queryOptions = new RandomUserGeneratorQueryOptions {
             Count = 1,
-            IncludeAvatar = true
+            IncludeAvatar = true,
+            Gender = "",
+            Nationality = "",
+            Seed = ""
         };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
@@ -159,7 +165,10 @@ public class Example
 
         var queryOptions = new RandomUserGeneratorQueryOptions {
             Count = 1,
-            IncludeAvatar = true
+            IncludeAvatar = true,
+            Gender = "",
+            Nationality = "",
+            Seed = ""
         };
 
         var response = apiClient.Execute(queryOptions);
@@ -197,7 +206,10 @@ public class Example
 
         var queryOptions = new RandomUserGeneratorQueryOptions {
             Count = 1,
-            IncludeAvatar = true
+            IncludeAvatar = true,
+            Gender = "",
+            Nationality = "",
+            Seed = ""
         };
 
         try
@@ -254,7 +266,10 @@ public class Example
 
         var queryOptions = new RandomUserGeneratorQueryOptions {
             Count = 1,
-            IncludeAvatar = true
+            IncludeAvatar = true,
+            Gender = "",
+            Nationality = "",
+            Seed = ""
         };
 
         try
@@ -296,7 +311,10 @@ apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
 var queryOptions = new RandomUserGeneratorQueryOptions {
     Count = 1,
-    IncludeAvatar = true
+    IncludeAvatar = true,
+    Gender = "",
+    Nationality = "",
+    Seed = ""
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -323,7 +341,10 @@ apiClient.SetLogger(message =>
 
 var queryOptions = new RandomUserGeneratorQueryOptions {
     Count = 1,
-    IncludeAvatar = true
+    IncludeAvatar = true,
+    Gender = "",
+    Nationality = "",
+    Seed = ""
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -342,7 +363,10 @@ apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (defau
 
 var queryOptions = new RandomUserGeneratorQueryOptions {
     Count = 1,
-    IncludeAvatar = true
+    IncludeAvatar = true,
+    Gender = "",
+    Nationality = "",
+    Seed = ""
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -355,7 +379,10 @@ The API client implements `IDisposable` for proper resource cleanup:
 ```csharp
 var queryOptions = new RandomUserGeneratorQueryOptions {
     Count = 1,
-    IncludeAvatar = true
+    IncludeAvatar = true,
+    Gender = "",
+    Nationality = "",
+    Seed = ""
 };
 
 using (var apiClient = new RandomUserGeneratorAPIClient("[YOUR_API_KEY]"))
@@ -376,17 +403,36 @@ using (var apiClient = new RandomUserGeneratorAPIClient("[YOUR_API_KEY]"))
   "error": null,
   "data": [
     {
-      "id": "967e4d46-963e-4108-a0c5-ded8f630dcc8",
-      "name": "Jennifer Hoppe V",
-      "gender": "Male",
-      "username": "Olen_Kihn88",
-      "email": "Juwan5@gmail.com",
-      "password": "f0VIWRnbXFvW9Tf",
-      "registered": "2025-06-29T22:00:36.084Z",
-      "phone": "1-716-677-4155",
-      "cell": "1-353-721-7455 x2081",
-      "birthdate": "1972-01-24T19:55:15.208Z",
-      "avatar": "https://storage.googleapis.com/apiverve/APIResources/faces/Male/40-50/87654321.jpg?X-Goog-Signature=..."
+      "id": "aeb01cae-300b-4e54-9cb0-76ce52d6b315",
+      "name": "Monique Torp",
+      "gender": "Female",
+      "username": "Monique.Torp",
+      "email": "Monique_Torp41@hotmail.com",
+      "password": "V7s6IHRMhlniG98",
+      "registered": "2026-01-10T15:18:03.898Z",
+      "phone": "1-967-684-8927 x83452",
+      "cell": "1-555-737-7469 x885",
+      "birthdate": "1976-03-25T20:38:58.998Z",
+      "age": 50,
+      "nationality": "US",
+      "location": {
+        "street": "6858 Darrick Ramp",
+        "city": "Parkersburg",
+        "state": "West Virginia",
+        "postcode": "31811-8127",
+        "country": "United States of America",
+        "countryCode": "US",
+        "latitude": 39.27687,
+        "longitude": -81.56839,
+        "timezone": "America/New_York"
+      },
+      "login": {
+        "salt": "xh1696HT",
+        "md5": "5ebad82435f817d5837916fa2885b95c",
+        "sha1": "b62baac1003eed109f32b3305bf049516f175819",
+        "sha256": "02a99836191088b702972c5153c9d4ce2290d39bb90de141b467f302e62e8143"
+      },
+      "avatar": "https://storage.googleapis.com/apiverve/APIResources/faces/Female/50-60/87654321.jpg?X-Goog-Signature=..."
     }
   ]
 }

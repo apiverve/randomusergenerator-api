@@ -68,7 +68,10 @@ namespace APIVerve.API.RandomUserGenerator
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
             { "count", new ValidationRule { Type = "integer", Required = false, Min = 1, Max = 100 } },
-            { "includeAvatar", new ValidationRule { Type = "boolean", Required = false } }
+            { "includeAvatar", new ValidationRule { Type = "boolean", Required = false } },
+            { "gender", new ValidationRule { Type = "string", Required = false } },
+            { "nationality", new ValidationRule { Type = "string", Required = false } },
+            { "seed", new ValidationRule { Type = "string", Required = false } }
         };
 
         /// <summary>Format validation patterns</summary>
